@@ -2,7 +2,7 @@
 
 ## 🚀 App Information
 - **App Name:** venkatsaisanitation
-- **Live URL:** https://venkatsaisanitation.herokuapp.com
+- **Live URL:** https://venkatsaisanitation-c38b35f4e542.herokuapp.com
 - **GitHub:** https://github.com/Meherangel23/VenkatSaiSanitation
 
 ---
