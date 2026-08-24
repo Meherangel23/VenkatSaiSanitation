@@ -58,6 +58,7 @@ services:
         condition: service_started
     networks:
       - app_network
+      - nrms_nrm_network   # external — allows proxying to nrm_app (nrms.co.in)
     logging:
       driver: "json-file"
       options:
@@ -86,3 +87,10 @@ services:
 networks:
   app_network:
     driver: bridge
+
+  # External network created by NaturalResourcemanagement compose stack.
+  # venkat_sai_nginx joins it so it can resolve nrm_app by container name
+  # and proxy nrms.co.in requests (see nginx/conf.d/nrms.conf).
+  # This replaces the manual:  docker network connect nrms_nrm_network venkat_sai_nginx
+  nrms_nrm_network:
+    external: true
